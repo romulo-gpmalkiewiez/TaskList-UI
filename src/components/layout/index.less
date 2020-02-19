@@ -1,0 +1,61 @@
+@import "~antd/lib/style/themes/default.less";
+
+@menu-height: 50px;
+
+.app-layout {
+  height: 100vh;
+}
+
+/** Fixed Header **/
+.app-layout-header {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: @menu-height;
+
+  .logo {
+    height: @menu-height;
+    margin-right: 5px;
+    padding: 2px 0;
+  }
+
+  .logout-btn {
+    height: @menu-height;
+    margin-left: auto;
+    border-radius: 0;
+  }
+}
+
+.app-layout-header__menu {
+  line-height: @menu-height;
+}
+
+.app-layout-content-wrapper {
+  padding: 0 50px;
+  margin-top: @menu-height;
+
+  .app-layout-breadcrumb {
+    margin: 16px 0;
+  }
+
+  .app-layout-content {
+    background: #fff;
+    padding: 24px;
+    min-height: 380px;
+  }
+}
+
+.app-layout-footer {
+  text-align: center;
+}
+
+/**
+ * Mobile
+ **/
+@media screen and (max-width: @screen-sm) {
+  .app-layout-header,
+  .app-layout-content-wrapper {
+    padding: 0 20px;
+  }
+}
